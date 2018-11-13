@@ -1,0 +1,17 @@
+/* 
+    Created on : 22-oct-2018, 15:35:57
+    Author     : iridum
+*/
+
+body { background-color: #ddd; }
+
+.top-nav-collapse { background-color: #007bff; }
+
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-1 { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/header.jpg"); }
