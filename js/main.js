@@ -1,4 +1,3 @@
-
 $("#btn-search").click(function(){
     var id = $("#input-search-id").val();
     var jqxhr = $.get( "solutions/cpp/"+id+".cc", function(data) {
@@ -6,10 +5,10 @@ $("#btn-search").click(function(){
         $("#code-container").html(data).each(function(i, block) {
             hljs.highlightBlock(block);
         });
-        $('html, body').animate({
-            scrollTop: $("#code-info").offset().top
-        }, 750, 'linear');
+        $("#container-search").addClass("d-none").removeClass("d-flex");
+        $("footer").addClass("d-none").removeClass("d-flex");
+        $("#container-view").addClass("d-flex").removeClass("d-none");
     }).fail(function(data) {
-        alert( "Error: problem not found." );
+        $("#error-problem").addClass("d-flex").removeClass("d-none");
     });
 });
