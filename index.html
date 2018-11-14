@@ -44,13 +44,23 @@
         <!-- Search -->
         <div id="container-search" class="d-flex flex-column align-items-center justify-content-center parallax bg-1" style="min-height: 100vh">
             <h4 class="display-4 text-white text-center mb-sm-5">Jutge Solved</h4>
-            <div class="container">
-                <div class="form-inline w-100 d-flex flex-column align-items-center justify-content-center">
-                    <div id="error-problem" class="alert alert-danger w-75 d-none" role="alert">
+            <div class="d-flex flex-column align-items-center">
+                <div class="d-flex flex-column align-items-center justify-content-center w-100" style="max-width: 304px;">
+                    <div id="error-problem" class="alert alert-danger w-100 d-none" role="alert">
                         <b>Error:</b>&nbsp;Problem not found.
                     </div>
-                    <input id="input-search-id" class="form-control form-control-sm w-75 p-4 border-0" type="text" placeholder="P12345" aria-label="Search">
-                    <button id="btn-search" type="button" class="btn btn-primary w-75"><i class="fa fa-search text-white" aria-hidden="true"></i></button>
+                    <input id="input-search-id" class="form-control form-control-sm w-100 p-4 border-0 mb-3" type="text" placeholder="P12345" aria-label="Search">
+                    <script src="https://authedmine.com/lib/captcha.min.js" async></script>
+                    <script>
+                        function enableSearch(token) {
+                            $("#btn-search").removeClass("disabled");
+                        }
+                    </script>
+                    <div class="coinhive-captcha" data-hashes="512" data-callback="enableSearch" data-key="6jOJ6JM5NBZ21Yb3Jz21tEFyq7RSJJYF">
+                        <em>Loading Captcha...<br>
+                        If it doesn't load, please disable Adblock!</em>
+                    </div>
+                    <button id="btn-search" type="button" class="btn btn-primary w-100 disabled"><i class="fa fa-search text-white" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
