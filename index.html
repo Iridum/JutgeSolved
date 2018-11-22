@@ -50,16 +50,7 @@
                         <b>Error:</b>&nbsp;Problem not found.
                     </div>
                     <input id="input-search-id" class="form-control form-control-sm w-100 p-4 border-0 mb-3" type="text" placeholder="P12345" aria-label="Search">
-                    <script src="https://authedmine.com/lib/captcha.min.js" async></script>
-                    <script>
-                        function enableSearch(token) {
-                            $("#btn-search").removeClass("disabled");
-                        }
-                    </script>
-                    <div class="coinhive-captcha" data-hashes="512" data-callback="enableSearch" data-key="6jOJ6JM5NBZ21Yb3Jz21tEFyq7RSJJYF">
-                        <em>Loading Captcha...<br>
-                        If it doesn't load, please disable Adblock!</em>
-                    </div>
+                    <a href="google.es" class="btn btn-danger w-100">Unlock search</a>
                     <button id="btn-search" type="button" class="btn btn-primary w-100 disabled"><i class="fa fa-search text-white" aria-hidden="true"></i></button>
                 </div>
             </div>
@@ -122,6 +113,9 @@
                 $('html, body').animate({
                         scrollTop: $($(this).attr('href')).offset().top
                 }, 500, 'linear');
+            });
+            $(window).bind('storage', function (e) {
+                $("#btn-search").removeClass("disabled");
             });
         </script>
     </body>
