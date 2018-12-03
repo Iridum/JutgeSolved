@@ -15,3 +15,11 @@ body { background-color: #0d47a1; }
     background-size: cover;
 }
 .bg-1 { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/header.jpg"); }
+
+.img-tutorial {
+  display: block;
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}

@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="en">
     <head>
-        <title>Jutge Solved</title>
+        <title>Jutge Solved - Solutions for Jutge.org</title>
         
         <!--  Basic META Tags -->
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Jutge.org problems solutions" />
+        <meta name="description" content="Search Jutge.org solutions." />
         <!--  Google META Tags -->
         <meta name="google-site-verification" content="TsVXsu7f8xly_pFtaj7epDH9_eI8brQB2oTI9ttkE-U" />
         <!--  Social META Tags -->
         <meta property="og:title" content="Jutge Solved">
-        <meta property="og:description" content="Jutge.org solved problems">
+        <meta property="og:description" content="Search Jutge.org solutions.">
         <meta property="og:image" content="https://iridum.github.io/JutgeSolved/launcher-icon.png">
         <meta property="og:url" content="https://iridum.github.io/JutgeSolved/">
         <meta name="twitter:card" content="summary_large_image">
         <!--  Windows App META Tags -->
         <meta name="application-name" content="Jutge Solved" />
         <meta name="msapplication-TileImage" content="launcher-icon.png">
-        <meta name="msapplication-TileColor" content="#007bff">
+        <meta name="msapplication-TileColor" content="#0d47a1">
         <!--  Android App META Tags -->
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="theme-color" content="#0d47a1">
+        <!--  Apple App META Tags -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Weather PWA">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+        <!--  Web icon -->
+        <link rel="icon" type="image/png" href="launcher-icon.png" />
+        <!--  Apple icon -->
+        <link rel="apple-touch-icon" href="launcher-icon.png">
         
         <!-- Bootstrap core CSS -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
@@ -38,20 +48,51 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
             <!-- Navbar brand -->
-            <a class="navbar-brand" href="index.html">Jutge Solved</a>
+            <a class="navbar-brand" href="index.html">
+                <img src="launcher-icon.png" height="30" class="d-inline-block align-middle" alt="JutgeSolved logo">
+                &nbsp;&nbsp;Jutge Solved
+            </a>
         </nav>
         
         <!-- Search -->
-        <div id="container-search" class="d-flex flex-column align-items-center justify-content-center parallax bg-1" style="min-height: 100vh">
-            <h4 class="display-4 text-white text-center mb-sm-5">Jutge Solved</h4>
+        <div id="container-search" class="d-flex flex-column align-items-center justify-content-center parallax bg-1" style="height: 100vh">
+            <h4 class="display-4 text-white text-center">Jutge Solved</h4>
+            <a href="#container-info" class="text-white mb-5" style="text-decoration: underline;">First time here?</a>
             <div class="d-flex flex-column align-items-center">
                 <div class="d-flex flex-column align-items-center justify-content-center w-100" style="max-width: 304px;">
                     <div id="error-problem" class="alert alert-danger w-100 d-none" role="alert">
                         <b>Error:</b>&nbsp;Problem not found.
                     </div>
-                    <input id="input-search-id" class="form-control form-control-sm w-100 p-4 border-0 mb-3" type="text" placeholder="P12345" aria-label="Search">
-                    <a href="https://stratoplot.com/3Imt" class="btn btn-danger w-100" onclick="window.open(this.href, 'Unlock search', 'left=20,top=20,width=500,height=500,toolbar=0,resizable=0'); return false;">Unlock search</a>
-                    <button id="btn-search" type="button" class="btn btn-primary w-100 disabled"><i class="fa fa-search text-white" aria-hidden="true"></i></button>
+                    <input id="input-search-id" class="form-control form-control-sm w-100 p-4 border-0 mb-sm-3 mb-2" type="text" placeholder="P12345" aria-label="Search">
+                    <a href="https://stratoplot.com/3Imt" class="btn btn-danger w-100" onclick="window.open(this.href, 'Unlock search', 'left=20,top=20,width=500,height=500,toolbar=0,resizable=0'); return false;">
+                        <i class="fa fa-search text-white" aria-hidden="true"></i>&nbsp;&nbsp;Unlock search
+                    </a>
+                    <button id="btn-search" type="button" class="btn btn-primary w-100 d-none disabled">
+                        <i class="fa fa-search text-white" aria-hidden="true"></i>&nbsp;&nbsp;Search
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Info -->
+        <div id="container-info" class="d-flex flex-column" style="min-height: 100vh; padding-top: 32px;">
+            <div class="card m-sm-5 m-1">
+                <div class="card-body">
+                    <h4 class="text-center m-4 mb-5">Search Jutge.org solutions in a few steps:</h4>
+                    <div class="row">
+                        <div class="col-sm-4 mb-4 d-flex flex-column align-items-center justify-content-center">
+                            <p class="text-center">Put the problem id</p>
+                            <img width="400" height="400" src="img/tutorial_0.png" class="img-tutorial">
+                        </div>
+                        <div class="col-sm-4 mb-4 d-flex flex-column align-items-center justify-content-center">
+                            <p class="text-center">Wait 5 seconds and skip advertising</p>
+                            <img width="400" height="400" src="img/tutorial_1.png" class="img-tutorial">
+                        </div>
+                        <div class="col-sm-4 mb-4 d-flex flex-column align-items-center justify-content-center">
+                            <p class="text-center">Get the answer</p>
+                            <img width="400" height="400" src="img/tutorial_2.png" class="img-tutorial">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,7 +101,6 @@
         <div id="container-view" class="d-none flex-column" style="height: 100vh; padding-top: 64px;">
             <pre class="w-100 m-0" style="height: 100%;"><code id="code-container" class="w-100" style="height: 100%;"></code></pre>
         </div>
-        
         
         
         <!-- Footer -->
@@ -115,7 +155,8 @@
                 }, 500, 'linear');
             });
             $(window).bind('storage', function (e) {
-                $("#btn-search").removeClass("disabled");
+                $("#btn-unlock").addClass("disabled d-none");
+                $("#btn-search").removeClass("disabled d-none");
             });
         </script>
     </body>
