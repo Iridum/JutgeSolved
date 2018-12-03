@@ -14,8 +14,20 @@ $("#btn-search").click(function(){
     });
 });
 
+$('a[href*="#"]').on('click', function (e) {
+    e.preventDefault();
+
+    $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+    }, 500, 'linear');
+});
+$(window).bind('storage', function (e) {
+    $("#btn-unlock").addClass("disabled d-none");
+    $("#btn-search").removeClass("disabled d-none");
+});
+
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('./service-worker.js')
-             .then(function() { console.log('Service Worker Registered'); });
+            .register('./service-worker.js')
+            .then(function() { console.log('Service Worker Registered'); });
 }
