@@ -1,13 +1,14 @@
 /* global self */
 
-var dataCacheName = 'JutgeSolved-v1';
-var cacheName = 'JutgeSolvedPWA-final-1';
+var dataCacheName = 'JutgeSolved-v1.1';
+var cacheName = 'JutgeSolvedPWA-final-1.1';
 var filesToCache = [
     '/',
     'index.html',
     'js/main.js',
     'css/extra.css',
-    'img/header.jpg'
+    'img/header.jpg',
+    'launcher-icon-128.png'
 ];
 
 self.addEventListener('install', function(e) {
